@@ -1,0 +1,21 @@
+table{
+	border:1px solid silver;
+	border-radius:5px;
+}
+
+.btn{
+	width:75px;
+	height:45px;
+}
+
+#equalToBtn{
+	background-color:blue;
+	color:white;
+	border-color:blue;
+}
+
+#resultText{
+	width:100%;
+	height:40px;
+	margin-right:2px;
+}
