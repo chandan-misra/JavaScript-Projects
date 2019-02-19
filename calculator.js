@@ -18,8 +18,18 @@ function getTarget(){
 	else if(id=="equalToBtn"){
 		console.log("Equal to button pressed!!!");
 		console.log(resultStr);
-		var result = eval(resultStr);
-		console.log(result);
-		resultText.value = result;
+		parse(resultStr);
+		//var result = eval(resultStr);
+		//console.log(result);
+		//resultText.value = result;
 	}
+}
+
+function parse(inputStr){
+	for (var i = 0; i < inputStr.length; i++) {
+		if(inputStr[i]=='&times'){
+			inputStr[i] = '*';
+		}
+	}
+	console.log(inputStr);
 }
