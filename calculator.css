@@ -1,21 +1,50 @@
+*{
+	box-sizing:border-box;
+}
+
 table{
 	border:1px solid silver;
 	border-radius:5px;
+	padding:5px;
 }
 
 .btn{
 	width:75px;
-	height:45px;
+	height:35px;
+	font:normal 15px verdana, sans-serif;
+	border:1px solid #D8D8D8;
+	background-color:#E6E6E6;
+	border-radius:1px;
+}
+	
+.btn:hover{
+		border:1px solid #A4A4A4;
 }
 
 #equalToBtn{
-	background-color:blue;
+	background-color:#58ACFA;
 	color:white;
-	border-color:blue;
+	border:1px solid #2E9AFE;
+}
+
+#equalToBtn:hover{
+		border:1px solid #0080FF;
 }
 
 #resultText{
 	width:100%;
 	height:40px;
-	margin-right:2px;
+	font:normal 20px verdana, sans-serif;
+	border:1px solid silver;
+	border-radius:1px;
+	//direction: rtl;
+}
+
+.operatorBtn{
+	background-color:#BDBDBD;
+	border:1px solid #A4A4A4;
+}
+
+.operatorBtn:hover{
+	border-color:#848484;
 }
