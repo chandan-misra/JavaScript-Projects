@@ -7,29 +7,29 @@ function init(){
 	
 }
 
-function getTarget(){	
+function getTarget(event){
+	console.log("inside getTarget");
 	var id = event.target.id;
-	resultText = document.getElementById("resultText");
+	var resultText = document.getElementById("resultText");
+	console.log(id);
 	if(id!="resultText" && id!="equalToBtn"){
-		console.log(id);		
+		//console.log(id);		
 		resultStr = resultText.value + id;
 		resultText.value = resultStr;
 	}
 	else if(id=="equalToBtn"){
 		console.log("Equal to button pressed!!!");
-		console.log(resultStr);
-		parse(resultStr);
-		//var result = eval(resultStr);
-		//console.log(result);
-		//resultText.value = result;
+		//console.log(resultStr);
+		var parsedStr = parse(resultStr);
+		var result = eval(parsedStr);
+		console.log(result);
+		resultText.value = result;
 	}
 }
 
 function parse(inputStr){
-	for (var i = 0; i < inputStr.length; i++) {
-		if(inputStr[i]=='&times'){
-			inputStr[i] = '*';
-		}
-	}
+	inputStr = inputStr.replace('\u00D7','*');
+	inputStr = inputStr.replace('\u00F7','/');
 	console.log(inputStr);
+	return inputStr;
 }
